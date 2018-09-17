@@ -1,0 +1,12 @@
+instrucciones
+tsconfig.json
+Cambiar la versión de TS a la 2017 y permitir configuracion de moment
+"target": "es2017",
+"allowSyntheticDefaultImports": true,
+"lib": [
+      "es2017",
+
+
+importar moment como:
+npm install moment --save
+
