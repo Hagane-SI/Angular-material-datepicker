@@ -15,9 +15,9 @@ moment.locale('es-MX');
   ],
 })
 export class AppComponent {
-  title = 'prueba';
+  title = 'Angular Material Datepicker';
 
-  //Variables for date
+  //Variables for today's date
   date: FormControl;
   today: Date;
 
@@ -28,8 +28,8 @@ export class AppComponent {
   //Variables to hold the selected user dates
   startDate: Date;
   endDate: Date;
-  dates;
-  dates2;
+  selectedDate;
+  selectedRangeDate;
 
   constructor() {
     this.date = new FormControl(new Date());
@@ -44,7 +44,8 @@ export class AppComponent {
 
   onDaySelected(event: MatDatepickerInputEvent<Date>) {
     console.log(moment(event.value).format('L'));
-    this.dates = (moment(event.value).format('L'));
+    this.startDate = moment(event.value).toDate();
+    this.selectedDate = moment(event.value).format('L');
   }
 
   onWeekSelected(event: MatDatepickerInputEvent<Date>) {
@@ -53,8 +54,6 @@ export class AppComponent {
     this.endDate = moment(event.value).add((6 - day), 'days').toDate();
     console.log("startDate: " + moment(this.startDate).format('L'));
     console.log("endDate: " + moment(this.endDate).format('L'));
-    this.dates2 = moment(this.startDate).format('L') + " - " + moment(this.endDate).format('L');
+    this.selectedRangeDate = moment(this.startDate).format('L') + " - " + moment(this.endDate).format('L');
   }
-
-
 }

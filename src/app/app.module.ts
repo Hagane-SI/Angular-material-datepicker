@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatSidenavModule } from '@angular/material';
 import { MatMomentDateModule, MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 
@@ -32,6 +32,7 @@ export const MY_FORMATS = {
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSidenavModule,
     MatInputModule,
     MatMomentDateModule,
   ],
@@ -40,6 +41,7 @@ export const MY_FORMATS = {
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
+    MatSidenavModule,
     MatMomentDateModule,
   ],
   providers: [

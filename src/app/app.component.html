@@ -1,4 +1,5 @@
-<div class="mat-app-background">
+<mat-sidenav-container>
+  <h1>Angular Material Datepicker</h1>
   <h3>Dia</h3>
   <mat-form-field>
     <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dayPicker" placeholder="Selecciona la fecha"
@@ -33,4 +34,4 @@
     <input disabled placeholder={{dates2}} value="{{dates2}}">
   </mat-form-field>
   <button mat-raised-button (click)="weekPicker2.open()">Open</button>
-</div>
+</mat-sidenav-container>
