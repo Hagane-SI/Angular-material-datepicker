@@ -21,7 +21,7 @@
     <input [hidden]="true" matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dayPicker2" placeholder="Selecciona la fecha"
       (dateChange)="onDaySelected($event)" disabled>
     <mat-datepicker #dayPicker2 disabled="false"></mat-datepicker>
-    <input disabled placeholder={{dates}} value="{{dates}}">
+    <input disabled placeholder={{selectedDate}} value="{{selectedDate}}">
   </mat-form-field>
   <button mat-raised-button (click)="dayPicker2.open()">Open</button>
   <br>
@@ -31,7 +31,7 @@
       (dateChange)="onWeekSelected($event)" disabled>
     <mat-datepicker-toggle matSuffix [for]="weekPicker2"></mat-datepicker-toggle>
     <mat-datepicker #weekPicker2 disabled="false"></mat-datepicker>
-    <input disabled placeholder={{dates2}} value="{{dates2}}">
+    <input disabled placeholder={{selectedRangeDate}} value="{{selectedRangeDate}}">
   </mat-form-field>
   <button mat-raised-button (click)="weekPicker2.open()">Open</button>
 </mat-sidenav-container>
